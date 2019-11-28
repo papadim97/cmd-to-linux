@@ -10,14 +10,33 @@ echo "help dir cls exit copy rename move del rd"
 i=0
 while [ $i -lt 1 ];do
 
-echo "GIVE COMMAND CMD :   (help ls)"
+echo "GIVE COMMAND CMD :   (help, dir , dir all, )"
 read command parameter parameterr
-if [ "$command" == "help "];
+if [ "$command" == "help" ] && [ "$parameter" == "" ];
+then
+	echo "-------------"
+	echo "help"
+	echo "help parameter"
+	echo "dir"
+	echo "dir all"
+	echo "cls"
+	echo "exit(back to bash)"
+	echo "copy"
+	echo "move"
+	echo "rename"
+	echo "del"
+	echo "rd"
+
+	#man $parameter
+elif [ "$command" == "help" ] && [ "$parameter" != "" ];
 then
 	man $parameter
-elif [ "$command" == "dir" ];
+elif [ "$command" == "dir" ] && [ "$parameter" == "" ];
 then
 	ls
+elif [ "$command" == "dir" ] && [ "$parameter" == "all" ];
+then
+	ls -al
 elif [ "$command" == "cls" ];
 then
 	clear
@@ -40,6 +59,6 @@ elif [ "$command" == "rd" ];
 then
         rm-r  $parameter 
 else
-	echo "Dont Find! "
+	echo "Dont Find!"
 fi
 done
