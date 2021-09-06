@@ -5,15 +5,14 @@ This is a emulator cmd for linux
 
 commands:
 
-help
-help ls
-dir
-dir all
-cls
-clear this bash
-exit
-copy
-move
-rename
-del
-rd
+help,
+help ls,
+dir,
+dir all,
+cls,
+exit,
+copy,
+move,
+rename,
+del,
+rd,
